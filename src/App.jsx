@@ -9,11 +9,16 @@ import data from "./components/util"
 const App = () => {
 const [songs, setSongs] = useState(data());
 const [currentSong, SetCurrentSong] = useState(songs[0]);
+const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <>
       <Song currentSong={currentSong}/>
-      <Player />
+      <Player 
+        setIsPlaying={isPlaying}
+        isPlaying={isPlaying}
+        currentSong={currentSong}
+      />
     </>
   )
 }
