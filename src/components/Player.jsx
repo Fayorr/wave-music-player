@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleRight, faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight, faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 
 const Player = ( {currentSong, isPlaying, setIsPlaying} ) => {
 
@@ -41,8 +41,8 @@ const dragHandler = (e)=>{
 
 //State
 const [songInfo, setSongInfo] = useState({
-  currentTime: null,
-  duration: null,
+  currentTime: 0,
+  duration: 0,
 })
   return (
     <div className='player'>
@@ -60,7 +60,7 @@ const [songInfo, setSongInfo] = useState({
       </div>
       <div className="play-control">
         <FontAwesomeIcon className="skip-back" size="2x" icon={faAngleLeft}/>
-        <FontAwesomeIcon onClick={playSongHandler} className="play" size="2x" icon={faPlay}/>
+        <FontAwesomeIcon onClick={playSongHandler} className="play" size="2x" icon={isPlaying ? faPause : faPlay}/>
         <FontAwesomeIcon className="skip-forward" size="2x" icon={faAngleRight}/>
         
 
