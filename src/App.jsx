@@ -15,7 +15,7 @@ const [isPlaying, setIsPlaying] = useState(false);
     <>
       <Song currentSong={currentSong}/>
       <Player 
-        setIsPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
         isPlaying={isPlaying}
         currentSong={currentSong}
       />

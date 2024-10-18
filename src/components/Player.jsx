@@ -6,16 +6,18 @@ const Player = ( {currentSong, isPlaying, setIsPlaying} ) => {
 
   const audioRef = useRef(null)
 const playSongHandler = () => {
-  console.log(audioRef)
  if (isPlaying) {
       audioRef.current.pause();
       setIsPlaying(!isPlaying);
  }  else {
-      audioRef.current.play()
+      audioRef.current.play();
       setIsPlaying(!isPlaying);
- }
-      
-}
+ }   
+};
+const timeUpdateHandler = (e) => {
+ const current = e.target.currentTime;
+ console.log(current)
+};
 
 const [songInfo, setSongInfo] = useState({
   currentTime: null,
@@ -33,8 +35,9 @@ const [songInfo, setSongInfo] = useState({
         <FontAwesomeIcon onClick={playSongHandler} className="play" size="2x" icon={faPlay}/>
         <FontAwesomeIcon className="skip-forward" size="2x" icon={faAngleRight}/>
         
+        
       </div>
-      <audio ref={audioRef} src="{currentSong.audio}"></audio>
+      <audio onTimeUpdate={timeUpdateHandler} ref={audioRef} src="{currentSong.audio}"></audio>
     </div>
   )
 }
