@@ -69,6 +69,7 @@ const [songInfo, setSongInfo] = useState({
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler} 
         ref={audioRef} 
+        
         src={currentSong.audio}></audio>
     </div>
   )
