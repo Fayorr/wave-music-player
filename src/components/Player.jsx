@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import {useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight, faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 
@@ -69,7 +69,7 @@ const [songInfo, setSongInfo] = useState({
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler} 
         ref={audioRef} 
-        
+
         src={currentSong.audio}></audio>
     </div>
   )
