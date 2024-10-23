@@ -21,7 +21,7 @@ const [isPlaying, setIsPlaying] = useState(false);
         isPlaying={isPlaying}
         currentSong={currentSong}
       />
-      <Library songs={songs}/>
+      <Library songs={songs} SetCurrentSong={SetCurrentSong}/>
     </>
   )
 }
