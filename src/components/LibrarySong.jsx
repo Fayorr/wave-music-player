@@ -8,6 +8,7 @@ const songSelectHandler = () => {
     if (playPromise !== undefined){
       playPromise.then((audio) => {
         audioRef.current.play();
+        
       })
     }
   }
