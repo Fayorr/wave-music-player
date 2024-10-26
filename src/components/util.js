@@ -69,7 +69,7 @@ artist: " Holy drill Ft. Dells TMX",
       audio: "https://files.ceenaija.com/uploads/music/2024/04/Holy-drill-feat-Dells-TMX-Redeemer-(CeeNaija.com).mp3",
       color: ["#ED632D", "#B3786E"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "Never Ending Love",
