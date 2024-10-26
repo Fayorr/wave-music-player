@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import Nav from './components/Nav'
 import Song from './components/Song'
 import Player from './components/Player'
 import Library from './components/Library'
@@ -28,7 +29,7 @@ const timeUpdateHandler = (e) => {
 
   return (
     <>
-
+      <Nav />
       <Song currentSong={currentSong}/>
       <Player
         songInfo={songInfo}
