@@ -9,7 +9,6 @@ const LibrarySong = ({ isPlaying, audioRef, song, songs, setSongs, setCurrentSon
         return{...song, active: true,}
       } else{
         return{...song, active: false, }
-        
       }
     });
     setSongs(newSongs);
