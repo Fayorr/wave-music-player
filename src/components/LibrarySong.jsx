@@ -16,7 +16,7 @@ const LibrarySong = ({ isPlaying, audioRef, song, songs, setSongs, setCurrentSon
       const playPromise = audioRef.current.play();
     
       if (playPromise !== undefined) {
-        playPromise.then((audio) => {
+        playPromise.then(() => {
           audioRef.current.play();
         })
       }
