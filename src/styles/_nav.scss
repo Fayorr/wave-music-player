@@ -1,14 +1,15 @@
 nav {
     min-height: 10vh;
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    background-color: red;
+    // background-color: red;
     button{
         background: transparent;
         border: none;
         cursor: pointer;
         padding: 0.5rem;
-        border 2px solid rgb(65, 65, 65);
+        border: 2px solid rgb(65, 65, 65);
         transition: all 0.3s ease;
         &:hover{
             background: rgb(65, 65, 65);

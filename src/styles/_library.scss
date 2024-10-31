@@ -9,12 +9,17 @@
     box-shadow: 2px 2px 50px rgb(203, 203, 203);
     overflow: scroll;
     transform: translateX(-100%);
-    opacity: 0;
+    // opacity: 0;
     transition: all 0.5s ease;
     h2{
         padding: 2rem;
     }
+ 
 }
+   .active {
+       transform: translateX(0);
+       left: 0;
+   }
 .library-song{
     display: flex;
     align-items: center;

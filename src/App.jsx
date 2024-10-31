@@ -19,6 +19,7 @@ const [songInfo, setSongInfo] = useState({
   currentTime: 0,
   duration: 0,
 })
+const [libraryStatus, setLibraryStatus] = useState(false);
 
 const timeUpdateHandler = (e) => {
 
@@ -29,7 +30,10 @@ const timeUpdateHandler = (e) => {
 
   return (
     <>
-      <Nav />
+      <Nav 
+        libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
+      />
       <Song currentSong={currentSong}/>
       <Player
         songInfo={songInfo}
@@ -45,7 +49,8 @@ const timeUpdateHandler = (e) => {
       setCurrentSong={setCurrentSong}
       audioRef={audioRef}
       isPlaying={isPlaying}
-
+      libraryStatus={libraryStatus}
+      setLibraryStatus={setLibraryStatus}
       />
       <audio 
         onTimeUpdate={timeUpdateHandler}
