@@ -79,7 +79,7 @@ const skipTrackHandler = (direction) =>{
         onChange={dragHandler}
         name="" 
         id="range" />
-        <p>{getTime(songInfo.duration)}</p>
+        <p>{songInfo.duration ? getTime(songInfo.duration) : "00:00"}</p>
       </div>
       <div className="play-control">
         <FontAwesomeIcon onClick={() => {skipTrackHandler("skip-back")}} className="skip-back" size="2x" icon={faAngleLeft}/>
