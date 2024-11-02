@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight, faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 
-const Player = ( {songs, setSongs, currentSong, setCurrentSong, isPlaying, setIsPlaying, audioRef, songInfo } ) => {
+const Player = ( {songs, setSongs, currentSong, setCurrentSong, isPlaying, setIsPlaying, audioRef, songInfo, currentIndex } ) => {
 
  //useEffect
  useEffect(()=>{
@@ -51,7 +51,7 @@ const dragHandler = (e)=>{
     audioRef.current.currentTime = e.target.value
 };
 const skipTrackHandler = (direction) =>{
- let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+ 
  if(direction === "skip-forward"){
   setCurrentSong(songs[(currentIndex + 1) % songs.length]);
   return;
@@ -59,7 +59,7 @@ const skipTrackHandler = (direction) =>{
 
  if(direction === "skip-back"){
     if((currentIndex - 1) % songs.length === -1){
-      setCurrentSong(songs[songs.length - 1]);trackAnim
+      setCurrentSong(songs[songs.length - 1]);
       return;
     }}
   setCurrentSong(songs[(currentIndex - 1) % songs.length])
@@ -101,3 +101,38 @@ const trackAnim = {
 }
 
 export default Player
+
+
+// import React, { useState, useRef, useEffect } from "react";
+
+// const MusicPlayer = ({ playlist }) => {
+//   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+//   const audioRef = useRef(null);
+
+//   // Function to go to the next song
+//   const handleNext = () => {
+//     setCurrentTrackIndex((prevIndex) =>
+//       prevIndex === playlist.length - 1 ? 0 : prevIndex + 1
+//     );
+//   };
+
+//   useEffect(() => {
+//     if (audioRef.current) {
+//       audioRef.current.play();
+//     }
+//   }, [currentTrackIndex]);
+
+//   return (
+//     <div>
+//       <audio
+//         ref={audioRef}
+//         src={playlist[currentTrackIndex]}
+//         onEnded={handleNext}
+//         controls
+//       />
+//       <button onClick={handleNext}>Next</button>
+//     </div>
+//   );
+// };
+
+// export default MusicPlayer;

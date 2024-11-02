@@ -30,10 +30,14 @@ const timeUpdateHandler = (e) => {
  const roundedCurrent = Math.round(current);
  const roundedDuration = Math.round(duration);
  const animation = Math.round((roundedCurrent / roundedDuration) * 100);
-console.log(animation)
  setSongInfo({...songInfo, currentTime: current, duration, animationPercentage: animation })
 };
 
+let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+const handleNext = () => {
+  setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+  return;
+}
   return (
     <>
       <Nav 
@@ -51,6 +55,7 @@ console.log(animation)
         isPlaying={isPlaying}
         currentSong={currentSong}
         setCurrentSong={setCurrentSong}
+        currentIndex={currentIndex}
       />
       <Library 
       songs={songs} 
@@ -64,6 +69,7 @@ console.log(animation)
       <audio 
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler} 
+        onEnded={handleNext}
         ref={audioRef} 
         src={currentSong.audio}>
       </audio>
