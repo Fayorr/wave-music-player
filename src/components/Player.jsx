@@ -102,37 +102,3 @@ const trackAnim = {
 
 export default Player
 
-
-// import React, { useState, useRef, useEffect } from "react";
-
-// const MusicPlayer = ({ playlist }) => {
-//   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-//   const audioRef = useRef(null);
-
-//   // Function to go to the next song
-//   const handleNext = () => {
-//     setCurrentTrackIndex((prevIndex) =>
-//       prevIndex === playlist.length - 1 ? 0 : prevIndex + 1
-//     );
-//   };
-
-//   useEffect(() => {
-//     if (audioRef.current) {
-//       audioRef.current.play();
-//     }
-//   }, [currentTrackIndex]);
-
-//   return (
-//     <div>
-//       <audio
-//         ref={audioRef}
-//         src={playlist[currentTrackIndex]}
-//         onEnded={handleNext}
-//         controls
-//       />
-//       <button onClick={handleNext}>Next</button>
-//     </div>
-//   );
-// };
-
-// export default MusicPlayer;
