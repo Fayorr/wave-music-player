@@ -24,6 +24,7 @@
     align-items: center;
     padding: 1rem 2rem;
     cursor: pointer;
+    transition: background 0.5s ease;
     img{
         width:30%;
     }
@@ -59,4 +60,10 @@ h4{
 
 .selected{
     background-color: rgb(239, 187, 239);
+}
+
+@media screen and (max-width: 768px) {
+    .library{
+        width: 100%;
+    }
 }

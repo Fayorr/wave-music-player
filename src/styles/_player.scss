@@ -6,8 +6,9 @@
     justify-content: space-between;
 }
 .time-control {
-    width: 50%;
+    width: 50%; 
     display: flex;
+    align-items: center;
     input {
         width: 100%;
         -webkit-appearance: none;
@@ -56,5 +57,8 @@ input[type="range"]::-webkit-slider-thumb{
 @media screen and (max-width: 768px) {
     .time-control {
         width: 90%;
+    }
+    .play-control{
+        width: 60%;
     }
 }

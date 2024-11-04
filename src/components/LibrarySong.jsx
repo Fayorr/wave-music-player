@@ -12,6 +12,7 @@ const LibrarySong = ({ isPlaying, audioRef, song, songs, setSongs, setCurrentSon
       }
     });
     setSongs(newSongs);
+    console.log("libsong effect")
     if (isPlaying) {
       const playPromise = audioRef.current.play();
     

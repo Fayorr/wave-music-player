@@ -5,7 +5,6 @@ import { faMusic } from "@fortawesome/free-solid-svg-icons"
 const Nav = ({libraryStatus, setLibraryStatus}) => {
   const libraryHandler = () => {
     setLibraryStatus(!libraryStatus);
-    console.log("toggled");
   }
   return (
    <nav>

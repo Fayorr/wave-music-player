@@ -26,7 +26,7 @@ const timeUpdateHandler = (e) => {
 
  const current = e.target.currentTime;
  const duration = e.target.duration;
- 
+
  //calculate percentage
  const roundedCurrent = Math.round(current);
  const roundedDuration = Math.round(duration);
@@ -40,7 +40,7 @@ const handleNext = () => {
   return;
 }
   return (
-    <>
+    <div className={`App ${libraryStatus ? "library-active" : "" }`}>
       <Nav 
         libraryStatus={libraryStatus}
         setLibraryStatus={setLibraryStatus}
@@ -74,7 +74,7 @@ const handleNext = () => {
         ref={audioRef} 
         src={currentSong.audio}>
       </audio>
-    </>
+    </div>
   )
 }
 
