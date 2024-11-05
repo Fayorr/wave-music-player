@@ -12,7 +12,7 @@ const Nav = ({libraryStatus, setLibraryStatus}) => {
         <h1>Waves</h1>
         <button onClick={libraryHandler} onBlur={(e) => e.target.blur()}>
             Library
-            <FontAwesomeIcon icon={faMusic} />
+            <FontAwesomeIcon className='faMusic' icon={faMusic} />
         </button>
    </nav>
   )

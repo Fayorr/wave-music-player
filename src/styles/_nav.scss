@@ -2,13 +2,17 @@ nav {
     min-height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    // background-color: red;
+    justify-content: space-between;
+    user-select: none;
+    padding: 1rem 7rem;
+    // border-bottom: 1px solid rgb(65, 65, 65);
+    background-color: #C18C5D;
     button{
-        background: transparent;
+        font-size: large;
         border: none;
         cursor: pointer;
-        padding: 0.5rem;
+        width: 7rem;
+        height: 2.8rem;
         border: 2px solid rgb(65, 65, 65);
         transition: all 0.3s ease;
         -webkit-user-select: none;
@@ -16,16 +20,33 @@ nav {
         -ms-user-select: none;
         /* IE 10 and IE 11 */
         user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 1rem;
         &:hover{
             background: rgb(65, 65, 65);
             color: white;
         }
     }
+    h1{
+        background-color: inherit;
+        color: black;
+    }
+    .faMusic{
+        background-color: inherit;
+    }
 }
 @media screen and (max-width: 768px) {
  nav{
+    // background-color: red;
+    padding: 0 2rem;
     button{
         z-index: 10;
+        width: 7rem;
+        height: 2.8rem;
+        background-color: inherit;
     }
+
  }
 }

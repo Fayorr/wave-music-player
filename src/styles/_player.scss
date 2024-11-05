@@ -60,6 +60,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media screen and (max-width: 768px) {
+    .player{
+        margin-top: 3rem;
+    min-height: 10vh;
+    }
     .time-control {
         width: 90%;
     }
