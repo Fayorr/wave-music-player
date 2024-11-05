@@ -1,4 +1,5 @@
 
+import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight, faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 
@@ -7,16 +8,26 @@ const Player = ( {songs, setSongs, currentSong, setCurrentSong, isPlaying, setIs
 
 
 const playSongHandler = () => {
- if (isPlaying) {
+ if (isPlaying ) {
       audioRef.current.pause();
       setIsPlaying(!isPlaying);
  }  else {
       audioRef.current.play();
       setIsPlaying(!isPlaying);
  }   
-
 };
 
+//Spacebar callback function to allow pause and play
+ const handleSpacebarPress = (event) => {
+    if (event.code === 'Space') {
+       playSongHandler();
+    }
+  };
+
+window.addEventListener('keydown', handleSpacebarPress);
+
+
+//Make song play after clicking next or back
 const activeSongHandler = (prevSong)=>{
      const newSongs = songs.map((song) => {
       if(song.id === prevSong.id){
@@ -26,7 +37,6 @@ const activeSongHandler = (prevSong)=>{
       }
     });
     setSongs(newSongs);
-    console.log("player effect")
     if (isPlaying) {
       const playPromise = audioRef.current.play();
     
@@ -95,7 +105,7 @@ const trackAnim = {
       <div className="play-control">
         <FontAwesomeIcon onClick={() => {skipTrackHandler("skip-back")}} className="skip-back" size="2x" icon={faAngleLeft}
         />
-        <FontAwesomeIcon onClick={playSongHandler} className="play" size="2x" icon={isPlaying ? faPause : faPlay}
+        <FontAwesomeIcon onClick={playSongHandler}  className="play" size="2x" icon={isPlaying ? faPause : faPlay}
         />
         <FontAwesomeIcon onClick={() => {skipTrackHandler("skip-forward")}} className="skip-forward" size="2x" icon={faAngleRight}
         />
