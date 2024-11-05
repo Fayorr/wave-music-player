@@ -11,8 +11,8 @@ const LibrarySong = ({ isPlaying, audioRef, song, songs, setSongs, setCurrentSon
         return{...song, active: false, }
       }
     });
-    setSongs(newSongs);
-    console.log("libsong effect")
+    setSongs(newSongs); 
+
     if (isPlaying) {
       const playPromise = audioRef.current.play();
     
@@ -22,7 +22,7 @@ const LibrarySong = ({ isPlaying, audioRef, song, songs, setSongs, setCurrentSon
         })
       }
     }
-    audioRef.current.play();
+    // audioRef.current.play();
   }
 
   return (

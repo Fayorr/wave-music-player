@@ -63,7 +63,7 @@ const handleNext = () => {
       setSongs={setSongs}
       setCurrentSong={setCurrentSong}
       audioRef={audioRef}
-      isPlaying={isPlaying}
+      isPlaying={isPlaying} 
       libraryStatus={libraryStatus}
       setLibraryStatus={setLibraryStatus}
       />

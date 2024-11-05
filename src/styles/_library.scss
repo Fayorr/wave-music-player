@@ -10,6 +10,12 @@
     overflow: scroll;
     transform: translateX(-100%);
     transition: all 0.5s ease;
+    -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+       
     h2{
         padding: 2rem;
     }

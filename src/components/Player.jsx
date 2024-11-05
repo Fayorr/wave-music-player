@@ -17,16 +17,6 @@ const playSongHandler = () => {
  }   
 };
 
-//Spacebar callback function to allow pause and play
- const handleSpacebarPress = (event) => {
-    if (event.code === 'Space') {
-       playSongHandler();
-    }
-  };
-
-window.addEventListener('keydown', handleSpacebarPress);
-
-
 //Make song play after clicking next or back
 const activeSongHandler = (prevSong)=>{
      const newSongs = songs.map((song) => {
@@ -103,11 +93,23 @@ const trackAnim = {
         <p>{songInfo.duration ? getTime(songInfo.duration) : "00:00"}</p>
       </div>
       <div className="play-control">
-        <FontAwesomeIcon onClick={() => {skipTrackHandler("skip-back")}} className="skip-back" size="2x" icon={faAngleLeft}
+        <FontAwesomeIcon 
+          onClick={() => {skipTrackHandler("skip-back")}} 
+          className="skip-back" 
+          size="2x" 
+          icon={faAngleLeft}
         />
-        <FontAwesomeIcon onClick={playSongHandler}  className="play" size="2x" icon={isPlaying ? faPause : faPlay}
+        <FontAwesomeIcon 
+        onClick={playSongHandler} 
+        className="play" 
+        size="2x" 
+        icon={isPlaying ? faPause : faPlay}
         />
-        <FontAwesomeIcon onClick={() => {skipTrackHandler("skip-forward")}} className="skip-forward" size="2x" icon={faAngleRight}
+        <FontAwesomeIcon 
+        onClick={() => {skipTrackHandler("skip-forward")}} 
+        className="skip-forward" 
+        size="2x" 
+        icon={faAngleRight}
         />
         
 
