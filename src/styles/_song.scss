@@ -1,6 +1,6 @@
 .song-container {
-    margin-top: 2rem;
-    min-height: 44vh;
+    margin-top: 1.8rem;
+    min-height: 59vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +13,7 @@
     h2{
        font-weight: 400;
        color: black;
+       padding: 0 1rem;
     }
     h3 {
         font-size: 1rem;
@@ -21,6 +22,8 @@
 }
 @media screen and (max-width: 768px) {
     .song-container{
+        margin-top: 2rem;
+        min-height: 44vh;
         img{
             width: 70%;
         }

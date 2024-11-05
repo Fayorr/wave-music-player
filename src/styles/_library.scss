@@ -3,9 +3,9 @@
     top: 0;
     left: 0;
     width: 20rem;
-    background: white;
+    // background: transparent;
     height: 100%;
-    background-color: #E7AD99;
+    background-color: transparent;
     box-shadow: 2px 2px 50px rgb(203, 203, 203);
     overflow: scroll;
     transform: translateX(-100%);
@@ -19,6 +19,7 @@
     h2{
         padding: 2rem;
         color: #000;
+        background-color: #C18C5D;
     }
  
 }
@@ -44,13 +45,13 @@
 padding: 1.2rem;
 background-color: inherit;
 h3{
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #000;
     background-color: inherit;
 }
 h4{
     padding-top: .5rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #000;
     background-color: inherit;
 }
