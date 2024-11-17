@@ -24,6 +24,7 @@ const App = () => {
     const current = e.target.currentTime;
     const duration = e.target.duration;
 
+
     
     //calculate percentage
     const roundedCurrent = Math.round(current);
